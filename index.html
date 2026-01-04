@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CryptoRisk | XYZ Assessment</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="app-container">
+        <!-- Floating Background Elements -->
+        <div class="bg-glow bg-glow-1"></div>
+        <div class="bg-glow bg-glow-2"></div>
+
+        <header class="main-header">
+            <div class="logo-section">
+                <div class="logo-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </div>
+                <span class="logo-text">CryptoRisk<span class="highlight">.ai</span></span>
+                <span class="beta-badge" data-i18n="beta">BETA</span>
+            </div>
+
+            <div class="header-controls">
+
+                <div class="auth-buttons">
+                    <button class="btn-ghost" id="btn-login" data-i18n="login">Log In</button>
+                    <button class="btn-primary" id="btn-signup" data-i18n="signup">Sign Up</button>
+                </div>
+            </div>
+        </header>
+
+        <main class="dashboard">
+            <div class="split-layout">
+                <!-- LEFT SECTION: Asset Overview -->
+                <section class="asset-overview glass-panel">
+                    <div class="asset-identity-minimal">
+                        <!-- Search for Coin -->
+                        <div class="search-container" style="margin-bottom: 1rem; width: 100%; max-width: 300px;">
+                            <input type="text" id="coin-search" list="coin-list"
+                                placeholder="Search Symbol (e.g. BTC)..."
+                                style="width: 100%; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); padding: 0.5rem; border-radius: 8px; color: white;">
+                            <datalist id="coin-list"></datalist>
+                        </div>
+
+                        <div class="asset-icon-large" id="asset-logo">XYZ</div>
+                        <h1 class="asset-name">XYZ Protocol</h1>
+                    </div>
+
+                    <div class="project-details">
+                        <p class="project-desc">XYZ Protocol is a decentralized infrastructure project focused on
+                            on-chain liquidity.</p>
+
+                        <div class="project-meta">
+                            <div class="meta-item">
+                                <span class="meta-label" data-i18n="network">Network</span>
+                                <span class="meta-value">Ethereum</span>
+                            </div>
+                            <div class="meta-item">
+                                <span class="meta-label" data-i18n="useCase">Use Case</span>
+                                <span class="meta-value">DeFi Infrastructure</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="model-confidence-minimal">
+                        <span class="confidence-label" data-i18n="modelConfidence">Model Confidence</span>
+                        <div class="confidence-value-row">
+                            <span class="confidence-tag" data-i18n="high">High</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- RIGHT SECTION: Risk Signals Engine -->
+                <section class="risk-engine glass-panel">
+                    <h2>Risk Signals Engine</h2>
+                    <div class="demo-disclaimer" data-i18n="demoDisclaimer">
+                        Risk signals are generated from limited and manually curated data. This version is for
+                        demonstration and feedback purposes only.
+                    </div>
+                    <div class="risk-list" id="risk-list">
+                        <!-- Risk Items injected by JS -->
+                    </div>
+
+                    <!-- User Feedback Section -->
+                    <!-- User Feedback Section -->
+                    <div class="feedback-section">
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfWODBZL25ROiChKG9HgNYu9-K61bieIXBMsYbjTxSQzECwdw/viewform?usp=dialog"
+                            target="_blank" class="feedback-action-box">
+                            <span class="feedback-action-text">Does this match how you evaluate crypto risk?</span>
+                            <svg class="feedback-arrow" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M12 5L19 12L12 19" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                    </div>
+                </section>
+            </div>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
